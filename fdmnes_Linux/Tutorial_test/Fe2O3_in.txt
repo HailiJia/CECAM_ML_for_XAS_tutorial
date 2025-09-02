@@ -1,5 +1,5 @@
 Filout
-  ./Fe2O3
+  /content/CECAM_ML_for_XAS_tutorial/fdmnes_Linux/Tutorial_test/Fe2O3
 
 Range
   -1.0  0.1  8.0  0.5  30     ! Energy range relative to Ef: near-edge start, fine step, end, coarse step, (last arg per your setup)
@@ -40,5 +40,6 @@ Convolution                   ! Post-processing broadening block
 !  Instrument  0.6            ! Example: Gaussian FWHM (eV) for beamline/monochromator resolution.
 
 End
+
 
 
