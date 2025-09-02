@@ -1,0 +1,8 @@
+! General indata file for FDMNES
+
+ 1
+Tutorial_test/Fe2O3_in.txt
+
+
+
+

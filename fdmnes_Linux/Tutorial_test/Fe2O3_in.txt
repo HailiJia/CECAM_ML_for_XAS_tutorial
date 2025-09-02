@@ -1,0 +1,44 @@
+Filout
+  ./Fe2O3
+
+Range
+  -1.0  0.1  8.0  0.5  30     ! Energy range relative to Ef: near-edge start, fine step, end, coarse step, (last arg per your setup)
+
+SCF                           ! Self-consistent potentials before XAS
+
+Radius
+  3.0                         ! Cluster radius [Å]. (For XANES, consider 5–8 Å if feasible.)
+
+Edge
+  L23                           ! 2p -> 3d edges (L2+L3). 
+
+Green                         ! Multiple scattering (Green's function) with muffin-tin potential 
+
+! Optional but useful for L-edges:
+! TDDFT                       ! Include TDDFT
+! Relativistic                ! Enable relativistic treatment / SOC if needed for L-edges (check your build/keyword)
+! Quadrupole                  ! Include E2 (useful for some L-edge pre-edge features)
+ 
+Crystal                       ! Finite cluster (no periodicity). Symmetry inferred automatically.
+  5.4135   5.4135   5.4135    55.283 55.283 55.283   = a, b, c, alpha, beta, gamma
+ 26  0.105    0.105    0.105       Fe
+ 26  0.395    0.395    0.395       Fe
+ 26  0.605    0.605    0.605       Fe
+ 26  0.895    0.895    0.895       Fe
+  8  0.292    0.708    0.000       O 
+  8  0.708    0.000    0.292       O 
+  8  0.000    0.292    0.708       O 
+  8  0.208    0.792    0.500       O 
+  8  0.792    0.500    0.208       O 
+  8  0.500    0.208    0.792       O 
+
+Z_Absorber                  
+ 26                           ! Fe K-edge
+ 
+Convolution                   ! Post-processing broadening block
+!  CoreHole    0.9            ! Example: energy-dependent Lorentzian (eV). Set per edge/material.
+!  Instrument  0.6            ! Example: Gaussian FWHM (eV) for beamline/monochromator resolution.
+
+End
+
+
