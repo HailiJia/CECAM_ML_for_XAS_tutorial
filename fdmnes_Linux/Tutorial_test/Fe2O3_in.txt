@@ -10,9 +10,11 @@ Radius
   3.0                         ! Cluster radius [Å]. (For XANES, consider 5–8 Å if feasible.)
 
 Edge
-  L23                           ! 2p -> 3d edges (L2+L3). 
+  L23                         ! 2p -> 3d edges (L2+L3). 
 
 Green                         ! Multiple scattering (Green's function) with muffin-tin potential 
+
+Energpho                      ! Output absolute energy values
 
 ! Optional but useful for L-edges:
 ! TDDFT                       ! Include TDDFT
@@ -40,6 +42,7 @@ Convolution                   ! Post-processing broadening block
 !  Instrument  0.6            ! Example: Gaussian FWHM (eV) for beamline/monochromator resolution.
 
 End
+
 
 
 
